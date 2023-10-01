@@ -13,6 +13,7 @@ fun main(args: Array<String>) {
         Thread.sleep(1000)
         println("The fake work ends here ${Thread.currentThread().name}")
     }
+    Thread.sleep(2000)
 
     println("Main program ends here ${Thread.currentThread().name}")
 
