@@ -31,6 +31,6 @@ fun Student.hasGotScholorship(marks: Int): Boolean {
 }
 
 fun Int.greater(b: Int): Int {
-    if (this > b) this
+    return if (this > b) this
     else b
 }
