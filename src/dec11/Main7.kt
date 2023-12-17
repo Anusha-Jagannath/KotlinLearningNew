@@ -14,10 +14,27 @@ fun main(args: Array<String>) {
     data.forEach {
         println(it)
     }
+
 }
 
-enum class CreditCard {
-    GOLD,
-    SILVER,
-    PLATINUM
+enum class CreditCard(var color: String) : ICashBack {
+    GOLD("gold") {
+        override fun getCashBack(): Float {
+          return 5f
+        }
+    },
+    SILVER("silver") {
+        override fun getCashBack(): Float {
+           return 2f
+        }
+    },
+    PLATINUM("platinum") {
+        override fun getCashBack(): Float {
+            return 10f
+        }
+    }
+}
+
+interface ICashBack {
+    fun getCashBack(): Float
 }
