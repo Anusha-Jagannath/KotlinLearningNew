@@ -8,12 +8,11 @@ fun main(args: Array<String>) {
     //run
     //with
 
-    var number: Int? = null
-    number?.let {
-        number = it + 1
+
+    var i = 3;
+    var data = (i * i).also {
+        i++
     }
 
-    val x: Int? = number?.also {
-        it + 1
-    }
+    println(data)
 }
